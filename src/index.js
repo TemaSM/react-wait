@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react";
+import { useState, createContext, useContext } from "react";
 import { anyWaiting, isWaiting, startWaiting, endWaiting } from "./api";
 
-const WaitingContext = React.createContext();
+const WaitingContext = createContext();
 
 function Wait(props) {
   const context = useContext(WaitingContext);
